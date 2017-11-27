@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="login.php" method="post" onsubmit="return check()">
+    ID<input type="text" name="id" id="id"><br>
+    PASSWD<input type="text" name="pass" id="pass"><br>
+    <input type="submit" value="login">
+</form>
+<form action="join.html">
+    <input type="submit" value="join">
+</form>
+</body>
+<script>
+    function check(){
+        if(document.getElementById('id').value == '' ||
+        document.getElementById('pass').value == ''){
+            alert('입력해주세여!');
+            return false;
+        }
+        return true;
+    }
+</script>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="join.php" method="post" onsubmit="return check()">
+    ID<input type="text" name="id" id="id"><br>
+    PASSWD<input type="text" name="pass" id="pass"><br>
+    <input type="submit" value="join">
+</form>
+<input type="button" value="back" onclick="back()">
+</body>
+<script>
+    function back(){
+        location.replace('loginTemplete.html');
+    }
+
+    function check(){
+        if(document.getElementById('id').value == '' ||
+            document.getElementById('pass').value == ''){
+            alert('입력해주세여!');
+            return false;
+        }
+        return true;
+    }
+</script>
+</html>
